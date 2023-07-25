@@ -1,0 +1,28 @@
+<!-- templates/bulk_create.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulk Create Students</title>
+</head>
+<body>
+    <h1>Bulk Create Students</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="school_id">Select School:</label>
+        <select id="school_id" name="school_id">
+            {% for school in schools %}
+            <option value="{{ school.id }}">{{ school.name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="grade">Select Grade:</label>
+        <select id="grade" name="grade">
+            {% for grade in grades %}
+            <option value="{{ grade }}" {% if grade == selected_grade %}selected{% endif %}>{{ grade }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="students">Enter Students for the Selected Grade (comma-separated):</label>
+        <textarea id="students" name="students" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Create Students">
+    </form>
+</body>
+</html>

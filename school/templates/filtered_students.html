@@ -1,0 +1,15 @@
+<!-- templates/filtered_students.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Students</title>
+</head>
+<body>
+    <h1>Filtered Students</h1>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.name }} (Grade {{ student.grade }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

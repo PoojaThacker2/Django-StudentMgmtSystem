@@ -1,0 +1,26 @@
+<!-- templates/filter_students.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Students</title>
+</head>
+<body>
+    <h1>Filter Students</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="school_id">Select School:</label>
+        <select id="school_id" name="school_id">
+            {% for school in schools %}
+            <option value="{{ school.id }}">{{ school.name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="grade">Select Grade:</label>
+        <select id="grade" name="grade">
+            {% for grade in grades %}
+            <option value="{{ grade }}">{{ grade }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Filter Students">
+    </form>
+</body>
+</html>

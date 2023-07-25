@@ -6,6 +6,8 @@ class School(models.Model):
     city = models.CharField(max_length=100)
     pin_code = models.CharField(max_length=10)
     password = models.CharField(max_length=255)
+    students = models.ManyToManyField('Student', related_name='schools')
+
 
     def __str__(self):
         return self.name
