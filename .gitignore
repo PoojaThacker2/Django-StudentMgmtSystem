@@ -1,0 +1,55 @@
+# Django stuff
+*.log
+*.pot
+*.pyc
+__pycache__/
+*.so
+*.pyd
+config.py
+db.sqlite3
+
+# Secret keys
+*.env
+
+# Static files
+/static/
+/staticfiles/
+
+# Media files
+/media/
+
+# Virtual environment
+venv/
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Dependency directories
+*/node_modules/
+*/bower_components/
+
+# Compiled Python files
+*.pyc
+
+# macOS files
+.DS_Store
+
+# Temporary files
+*.swp
+*~
+
+# Testing files
+htmlcov/
+
+# Coverage reports
+.coverage
+
+# Translation files
+*.mo
+
+# Python packaging
+*.egg-info/
+dist/
+build/

@@ -1,4 +1,4 @@
-## Discovery POC
+## School Management System
 Django Project
 
 ## Steps to follow 
